@@ -7,6 +7,7 @@ import minus from '../../../images/icons/minus.png';
 
 
 const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
+    console.log('pp',preStation);
    
 
     return (
@@ -25,11 +26,10 @@ const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
                         <p className='station-gap'>{preStation?.harze}</p>
                         
                       </li>
-                      
-                      <hr className='divider-station'/>
-                    
-                    
 
+                      {preStation._id?<hr className='divider-station'/>:<></>}
+                      
+                      
                     <li className='select-station'>
                         <img src={minus} alt="" height={40} />
                         <img src={selectImg} alt="" height={150} />
@@ -42,7 +42,8 @@ const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
                         <p className='station-gap'>{selectStation?.harze}</p>
                         
                     </li>
-                    <hr className='divider-station'/>
+
+                    {nextStation._id?<hr className='divider-station'/>:<></>}
                 
 
                     <li className='station-title'>

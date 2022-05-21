@@ -15,7 +15,6 @@ const StationList = ({stations,handlePlay}) => {
                     {stations.map(station=>
                       <ul className='station-container' key={Math.random()}>
                         
-                     
                      <li className='station-title' onClick={()=>handlePlay(station._id)}>
                          
                         
@@ -23,10 +22,11 @@ const StationList = ({stations,handlePlay}) => {
                         <p className='station-gap'>{station.harze}</p>
                         
                       </li>
-                      
-                      
-                      
                       <hr className='divider-station'/>
+                      
+                      
+                      
+                      
                       </ul>
                         
                     )}
