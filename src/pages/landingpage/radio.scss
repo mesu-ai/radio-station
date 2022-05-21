@@ -59,6 +59,12 @@
 
 }
 
+.station-container{
+    padding-left: 0;
+    margin: 0;
+
+}
+
 
 
 .station-title{
@@ -68,7 +74,9 @@
     list-style-type: none;
     
     
+    
 }
+
 
 .station-gap{ 
     margin: 15px 0;
@@ -79,6 +87,8 @@
     @include h-center;
     padding: 10px 0;
 }
+
+
 
 .radio-footer{
     

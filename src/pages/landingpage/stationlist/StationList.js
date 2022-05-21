@@ -2,7 +2,7 @@ import React from 'react';
 import back from '../../../images/icons/back-arrow.png';
 import radioSwitch from '../../../images/icons/switch.png';
 
-const StationList = () => {
+const StationList = ({stations,handlePlay}) => {
     return (
         <>
                 <div className='radio-header'>
@@ -12,34 +12,24 @@ const StationList = () => {
 
                 </div>
                 <div className='radio-body'>
-                    <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                    {stations.map(station=>
+                      <ul className='station-container' key={Math.random()}>
                         
-                    </li>
-                    <hr className='divider-station'/>
-                    <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
-                    </li>
-                    <hr className='divider-station'/>
-                    <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                     
+                     <li className='station-title' onClick={()=>handlePlay(station._id)}>
+                         
                         
-                    </li>
-                    <hr className='divider-station'/>
-                    <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                        <p className='station-gap'>{station.name}</p>
+                        <p className='station-gap'>{station.harze}</p>
                         
-                    </li>
-                    <hr className='divider-station'/>
-                    <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                      </li>
+                      
+                      
+                      
+                      <hr className='divider-station'/>
+                      </ul>
                         
-                    </li>
+                    )}
                     
 
 

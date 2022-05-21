@@ -6,7 +6,9 @@ import plus from '../../../images/icons/plus.png';
 import minus from '../../../images/icons/minus.png';
 
 
-const StationSelect = () => {
+const StationSelect = ({stations,selectStation}) => {
+   
+
     return (
         <>
         <div className='radio-header'>
@@ -16,12 +18,17 @@ const StationSelect = () => {
 
                 </div>
                 <div className='radio-body'>
-                    <li className='station-title'>
+                    
+                      <li className='station-title'>
+                        
                         <p className='station-gap'>Putin FM</p>
                         <p className='station-gap'>66,6</p>
                         
-                    </li>
-                    <hr className='divider-station'/>
+                      </li>
+                      
+                      <hr className='divider-station'/>
+                    
+                    
 
                     <li className='select-station'>
                         <img src={minus} alt="" height={40} />
@@ -29,18 +36,38 @@ const StationSelect = () => {
                         <img src={plus} alt="" height={40} />
 
                     </li>
-                    
                     <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                        
+                        <p className='station-gap'>{selectStation.name}</p>
+                        <p className='station-gap'>{selectStation.harze}</p>
                         
                     </li>
                     <hr className='divider-station'/>
+                
+
                     <li className='station-title'>
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                        
+                        <p className='station-gap'>aa FM</p>
+                        <p className='station-gap'>66,5</p>
                         
                     </li>
+
+
+                      
+                    
+                    
+                    {/* {stations.slice(1-3).map(station=>
+                      <ul className='station-container' key={Math.random()}>
+                      <li className='station-title'>
+                        
+                        <p className='station-gap'>{station.name}</p>
+                        <p className='station-gap'>{station.harze}</p>
+                        
+                      </li>
+                      <hr className='divider-station'/>
+                      </ul>
+                        
+                    )} */}
                     
 
 
@@ -50,7 +77,7 @@ const StationSelect = () => {
 
                 <div className='radio-footer'>
                     <p className='current-station'>Currently Playing</p>
-                    <p className='current-playing'>Putin FM</p>
+                    <p className='current-playing'>{selectStation.name}</p>
 
                 </div>
 
