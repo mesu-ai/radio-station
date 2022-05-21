@@ -26,9 +26,12 @@ const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
 
                         <ul className='station-container'>
                           <li className='select-station'>
-                            <img src={minus} alt="" height={40} />
-                            <img src={selectImg} alt="" height={150} />
-                            <img src={plus} alt="" height={40} />
+                              
+                              <div className='btn-container'><img className='custom-button'  src={minus} alt="" height={40} /></div>
+                              <div><img src={selectImg} alt="" height={150} /></div>
+                              <div className='btn-container'><img className='custom-button'  src={plus} alt="" height={40} /></div>
+                              
+
                         ` </li>
 
                           <li className='station-title'>

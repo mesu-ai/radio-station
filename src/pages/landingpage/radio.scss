@@ -8,10 +8,22 @@
     
 }
 
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 @mixin station-name {
     color: $stationName;
     font-size: 22px;
 
+    
+}
+
+@mixin custom-btn {
+    cursor: pointer;
     
 }
 
@@ -91,13 +103,20 @@
  }
 
 .select-station{
-    // height: 170px;
-    // padding: 10px 0;
-    // display: flex;
-    // justify-content: space-between;
-    //  align-items: center;
-    @include h-center;
+    height: 170px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    column-gap: auto;
     padding: 10px 0;
+}
+
+.btn-container{
+    @include centered;
+}
+.custom-button{
+    
+    @include custom-btn;
+    
 }
 
 
