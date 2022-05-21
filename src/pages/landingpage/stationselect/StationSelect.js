@@ -7,7 +7,7 @@ import minus from '../../../images/icons/minus.png';
 
 
 const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
-    console.log('pp',preStation);
+    // console.log('pp',preStation);
    
 
     return (
@@ -19,59 +19,38 @@ const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
 
                 </div>
                 <div className='radio-body'>
-                    
-                      <li className='station-title'>
-                        
-                        <p className='station-gap'>{preStation?.name}</p>
-                        <p className='station-gap'>{preStation?.harze}</p>
-                        
-                      </li>
 
-                      {preStation._id?<hr className='divider-station'/>:<></>}
-                      
-                      
-                    <li className='select-station'>
-                        <img src={minus} alt="" height={40} />
-                        <img src={selectImg} alt="" height={150} />
-                        <img src={plus} alt="" height={40} />
+                    {stations.map(station=>
 
-                    </li>
-                    <li className='station-title'>
-                        
-                        <p className='station-gap'>{selectStation?.name}</p>
-                        <p className='station-gap'>{selectStation?.harze}</p>
-                        
-                    </li>
+                        station===selectStation?
 
-                    {nextStation._id?<hr className='divider-station'/>:<></>}
+                        <ul className='station-container'>
+                          <li className='select-station'>
+                            <img src={minus} alt="" height={40} />
+                            <img src={selectImg} alt="" height={150} />
+                            <img src={plus} alt="" height={40} />
+                        ` </li>
+
+                          <li className='station-title'>
+                            <p className='station-gap'>{selectStation?.name}</p>
+                            <p className='station-gap'>{selectStation?.harze}</p>
+
+                          </li>
+                          <hr className='divider-station'/>
+                        </ul>
+                   
+                        :
+                         <>
+                         <li className='station-title'>
+                            <p className='station-gap'>{station?.name}</p>
+                            <p className='station-gap'>{station?.harze}</p>
+                            
+                          </li>
+                          <hr className='divider-station'/>
+                          </>
+
+                         )}
                 
-
-                    <li className='station-title'>
-                        
-                        <p className='station-gap'>{nextStation?.name}</p>
-                        <p className='station-gap'>{nextStation?.harze}</p>
-                        
-                    </li>
-
-
-                      
-                    
-                    
-                    {/* {stations.slice(1-3).map(station=>
-                      <ul className='station-container' key={Math.random()}>
-                      <li className='station-title'>
-                        
-                        <p className='station-gap'>{station.name}</p>
-                        <p className='station-gap'>{station.harze}</p>
-                        
-                      </li>
-                      <hr className='divider-station'/>
-                      </ul>
-                        
-                    )} */}
-                    
-
-
                 </div>
 
                 <hr className='divider-station'/>
