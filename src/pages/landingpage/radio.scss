@@ -65,7 +65,6 @@
     
     list-style-type: none;
     
-    // padding: 8px 20px;
     
 }
 
@@ -76,14 +75,13 @@
 
 .select-station{
     @include h-center;
+    padding: 10px 0;
 }
 
 .radio-footer{
-    // height: 20%;
-    // margin-bottom: 30px;
-    // padding-bottom: 30px;
+    
     .current-station{
-        margin-top: 10px;
+        padding-top: 7px;
         color: $currentTitle;
         font-size: 16px;
         text-transform: uppercase;
