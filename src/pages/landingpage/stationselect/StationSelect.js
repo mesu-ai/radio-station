@@ -6,7 +6,7 @@ import plus from '../../../images/icons/plus.png';
 import minus from '../../../images/icons/minus.png';
 
 
-const StationSelect = ({stations,selectStation}) => {
+const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
    
 
     return (
@@ -21,8 +21,8 @@ const StationSelect = ({stations,selectStation}) => {
                     
                       <li className='station-title'>
                         
-                        <p className='station-gap'>Putin FM</p>
-                        <p className='station-gap'>66,6</p>
+                        <p className='station-gap'>{preStation?.name}</p>
+                        <p className='station-gap'>{preStation?.harze}</p>
                         
                       </li>
                       
@@ -38,8 +38,8 @@ const StationSelect = ({stations,selectStation}) => {
                     </li>
                     <li className='station-title'>
                         
-                        <p className='station-gap'>{selectStation.name}</p>
-                        <p className='station-gap'>{selectStation.harze}</p>
+                        <p className='station-gap'>{selectStation?.name}</p>
+                        <p className='station-gap'>{selectStation?.harze}</p>
                         
                     </li>
                     <hr className='divider-station'/>
@@ -47,8 +47,8 @@ const StationSelect = ({stations,selectStation}) => {
 
                     <li className='station-title'>
                         
-                        <p className='station-gap'>aa FM</p>
-                        <p className='station-gap'>66,5</p>
+                        <p className='station-gap'>{nextStation?.name}</p>
+                        <p className='station-gap'>{nextStation?.harze}</p>
                         
                     </li>
 
