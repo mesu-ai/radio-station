@@ -1,0 +1,99 @@
+
+@import '../../scss/variables';
+
+@mixin h-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+@mixin station-name {
+    color: $stationName;
+    font-size: 22px;
+
+    
+}
+
+.grid-Container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr );
+    column-gap: 30px;
+    background-color: $bgColor;
+    padding: 30px;
+
+
+}
+
+.grid-item{
+    background-color: $itemColor;
+    border-radius: 12px;
+    padding-bottom: 30px;
+}
+
+.divider-station{
+    height: 1px;
+    background-color: #707070;
+    border: none;
+    
+}
+
+.radio-header{
+    @include h-center;
+    color:$bodyFontColor;
+    background-color: $headerBgColor;
+    border-radius:12px 12px 0 0 ;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 30px;
+    padding: 0 20px;
+    
+}
+
+.radio-body{
+    padding: 0 25px;
+    height: 70%
+    
+
+}
+
+
+
+.station-title{
+    @include h-center;
+    @include station-name;
+    
+    list-style-type: none;
+    
+    // padding: 8px 20px;
+    
+}
+
+.station-gap{ 
+    margin: 15px 0;
+ }
+
+
+.select-station{
+    @include h-center;
+}
+
+.radio-footer{
+    // height: 20%;
+    // margin-bottom: 30px;
+    // padding-bottom: 30px;
+    .current-station{
+        margin-top: 10px;
+        color: $currentTitle;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin: 0
+    }
+    .current-playing{
+        @include station-name;
+        margin:  0;
+
+    }
+
+}
