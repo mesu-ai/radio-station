@@ -24,7 +24,7 @@ const StationSelect = ({stations,selectStation}) => {
 
                         station===selectStation?
 
-                        <ul className='station-container'>
+                        <ul className='station-container' key={Math.random()}>
                           <li className='select-station'>
                               
                               <div className='btn-container'><img className='custom-button'  src={minus} alt="" height={40} /></div>
@@ -43,14 +43,14 @@ const StationSelect = ({stations,selectStation}) => {
                         </ul>
                    
                         :
-                         <>
+                         <ul className='station-container' key={Math.random()}>
                          <li className='station-title'>
                             <p className='station-gap'>{station?.name}</p>
                             <p className='station-gap'>{station?.frequency}</p>
                             
                           </li>
                           <hr className='divider-station'/>
-                          </>
+                          </ul>
 
                          )}
                 
