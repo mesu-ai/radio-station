@@ -27,14 +27,20 @@
     
 }
 
+.container{
+    @include centered;
+    width: 100vw;
+    background-color: $bgColor;
+
+}
+
 .grid-Container{
-    margin-top: 20px;
+    // margin-top: 20px;
     height: 530px;
     display: grid;
     // grid-template-columns: repeat(2, 1fr );
     grid-template-columns: 400px 400px;
     column-gap: 30px;
-    background-color: $bgColor;
     padding: 30px;
 
 

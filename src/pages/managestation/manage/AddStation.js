@@ -22,7 +22,7 @@ const AddStation = () => {
     const handleSubmit=(e)=>{
         console.log(stationData);
 
-         axios.post('http://localhost:5000/stations',stationData)
+         axios.post('https://immense-fjord-26417.herokuapp.com/stations',stationData)
         .then(res=>{
             if(res.status===200){
                 alert('Added a station !');

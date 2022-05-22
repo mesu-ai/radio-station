@@ -30,7 +30,7 @@ const UpdateStation = () => {
     const handleSubmit=(e)=>{
 
 
-        axios.put(`http://localhost:5000/stations/${id}`,stationData)
+        axios.put(`https://immense-fjord-26417.herokuapp.com/stations/${id}`,stationData)
         .then(res=>{
             if(res.status===200){
                 alert('Updated the Station !');

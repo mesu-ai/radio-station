@@ -8,7 +8,7 @@ import '../../scss/stationmanage-style.scss';
 const ManageStation = () => {
     const [stations,setStations]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:5000/stations')
+        axios.get('https://immense-fjord-26417.herokuapp.com/stations')
         .then(res=>{
             setStations(res.data);
             // console.log(res.data);
@@ -30,7 +30,7 @@ const ManageStation = () => {
 
     const handleDelete=(id)=>{
         console.log(id);
-        axios.delete(`http://localhost:5000/stations/${id}`)
+        axios.delete(`https://immense-fjord-26417.herokuapp.com/stations/${id}`)
         .then(res=>{
             console.log(res);
             if(res.status===200){

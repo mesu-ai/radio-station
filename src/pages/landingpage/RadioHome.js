@@ -13,7 +13,7 @@ const RadioHome = () => {
 
     const [stations,setStations]=useState([]);
     useEffect(()=>{
-        axios.get('http://localhost:5000/stations')
+        axios.get('https://immense-fjord-26417.herokuapp.com/stations')
         .then(res=>{
             setStations(res.data);
             // console.log(res.data);
@@ -25,26 +25,23 @@ const RadioHome = () => {
         
         // find current station
        const findStation=stations.find(station=>station._id===id);
-       setSelectStation(findStation);
-      
-
-        
+       setSelectStation(findStation);   
     }
-    // console.log(selectStation);
+    
 
     return (
 
-        <div className='grid-Container'>
-            <div className='grid-item'>
-                <StationList stations={stations} handlePlay={handlePlay}/>
+        <div className='container'>
+            <div className='grid-Container'>
+                <div className='grid-item'>
+                    <StationList stations={stations} handlePlay={handlePlay}/>
 
-            </div>
+                </div>
 
-            <div className='grid-item'>
-                <StationSelect stations={stations} selectStation={selectStation}/>
+                <div className='grid-item'>
+                    <StationSelect stations={stations} selectStation={selectStation}/>
+                </div>
             </div>
-           
-            
         </div>
     );
 };
