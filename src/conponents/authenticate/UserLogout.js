@@ -1,6 +1,6 @@
 import React from 'react';
 import { GoogleLogout } from 'react-google-login';
-const clientId="623187840357-b4qcpd81rddaibvc8h3kbfobabok7qp4.apps.googleusercontent.com";
+// const clientId="623187840357-b4qcpd81rddaibvc8h3kbfobabok7qp4.apps.googleusercontent.com";
 
 const UserLogout = () => {
     const logout=()=>{
@@ -9,8 +9,8 @@ const UserLogout = () => {
     return (
         <div id='signOutButton'>
             <GoogleLogout
-                clientId={clientId}
-                buttonText="Logout"
+                clientId={process.env.REACT_APP_GOOGLE_CLIENT_ID}
+                buttonText="Logout With Google"
                 onLogoutSuccess={logout}
                 >
             </GoogleLogout>
