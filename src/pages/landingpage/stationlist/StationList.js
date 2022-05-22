@@ -19,7 +19,7 @@ const StationList = ({stations,handlePlay}) => {
                          
                         
                         <p className='station-gap'>{station.name}</p>
-                        <p className='station-gap'>{station.harze}</p>
+                        <p className='station-gap'>{station.frequency}</p>
                         
                       </li>
                       <hr className='divider-station'/>

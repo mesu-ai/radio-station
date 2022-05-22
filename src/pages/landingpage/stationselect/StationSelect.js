@@ -6,7 +6,7 @@ import plus from '../../../images/icons/plus.png';
 import minus from '../../../images/icons/minus.png';
 
 
-const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
+const StationSelect = ({stations,selectStation}) => {
     // console.log('pp',preStation);
    
 
@@ -36,7 +36,7 @@ const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
 
                           <li className='station-title'>
                             <p className='station-gap'>{selectStation?.name}</p>
-                            <p className='station-gap'>{selectStation?.harze}</p>
+                            <p className='station-gap'>{selectStation?.frequency}</p>
 
                           </li>
                           <hr className='divider-station'/>
@@ -46,7 +46,7 @@ const StationSelect = ({stations,selectStation,preStation,nextStation}) => {
                          <>
                          <li className='station-title'>
                             <p className='station-gap'>{station?.name}</p>
-                            <p className='station-gap'>{station?.harze}</p>
+                            <p className='station-gap'>{station?.frequency}</p>
                             
                           </li>
                           <hr className='divider-station'/>
