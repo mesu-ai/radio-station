@@ -5,6 +5,7 @@ import { GoogleLogout } from 'react-google-login';
 const UserLogout = () => {
     const logout=()=>{
         console.log('logout successfully');
+        localStorage.removeItem('accessToken');
     }
     return (
         <div id='signOutButton'>
